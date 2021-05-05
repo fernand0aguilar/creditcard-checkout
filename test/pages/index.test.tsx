@@ -1,15 +1,16 @@
 import React from 'react'
 import { render, fireEvent } from '../testUtils'
-import { Home } from '../../pages/index'
 
-describe('Home page', () => {
-  // it('matches snapshot', () => {
-  //   const { asFragment } = render(<Home />, {})
-  //   expect(asFragment()).toMatchSnapshot()
-  // })
+import Index from '../../pages/index'
+
+describe('Hello World Component', () => {
+  it('matches snapshot', () => {
+    const { asFragment } = render(<Index />, {})
+    expect(asFragment()).toMatchSnapshot()
+  })
 
   it('Clicking button triggers fetch function and gets response from API', () => {
-    const { getByText } = render(<Home />, {})
+    const { getByText } = render(<Index />, {})
     window.alert = jest.fn()
     new Promise(() => {
       fireEvent.click(getByText('Test Button'))

@@ -1,0 +1,28 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Hello World Component matches snapshot 1`] = `
+<DocumentFragment>
+  <div
+    class="container"
+  >
+    <header>
+      <h2>
+        Header 🤖
+      </h2>
+    </header>
+    <main>
+      <h1>
+        hello world 🌍
+      </h1>
+      <button>
+        Test Button
+      </button>
+    </main>
+    <footer>
+      <h2>
+        FooOooter 👣
+      </h2>
+    </footer>
+  </div>
+</DocumentFragment>
+`;

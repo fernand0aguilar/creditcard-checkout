@@ -19,6 +19,15 @@
       "pre-push": "yarn run type-check"
     }
   },
+  "prettier": {
+    "semi": false,
+    "singleQuote": true
+  },
+  "babel": {
+    "presets": [
+      "next/babel"
+    ]
+  },
   "lint-staged": {
     "*.@(ts|tsx)": [
       "yarn lint",
