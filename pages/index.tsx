@@ -1,6 +1,10 @@
 import Head from 'next/head'
 import Image from 'next/image'
 
+import axios from 'axios'
+
+const fetcher = (url: string) => axios(url).then((res) => res.data)
+
 export const Home = (): JSX.Element => (
   <div className="container">
     <Head>
@@ -18,8 +22,9 @@ export const Home = (): JSX.Element => (
       </p>
 
       <button
-        onClick={() => {
-          window.alert('With typescript and Jest')
+        onClick={async () => {
+          const data = await fetcher('/api/pagar')
+          alert(`data: ${data.message}`)
         }}
       >
         Test Button

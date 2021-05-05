@@ -1,27 +1,47 @@
-# NextJS Typescript Boilerplate
+[![Continuous Integration](https://github.com/fernand0aguilar/demoshop-creditcard-checkout/actions/workflows/continuous-integration.yml/badge.svg)](https://github.com/fernand0aguilar/demoshop-creditcard-checkout/actions/workflows/continuous-integration.yml)
 
-Bootstrap a developer-friendly NextJS app configured with:
+# 
+## Desafio
 
-- [Typescript](https://www.typescriptlang.org/)
-- Linting with [ESLint](https://eslint.org/)
-- Formatting with [Prettier](https://prettier.io/)
-- Linting, typechecking and formatting on by default using [`husky`](https://github.com/typicode/husky) for commit hooks
-- Testing with [Jest](https://jestjs.io/) and [`react-testing-library`](https://testing-library.com/docs/react-testing-library/intro)
+Desenvolver uma aplicação front-end de acordo com as especificações descritas nos **requisitos** utilizando a _stack_ tecnologica de sua preferencia.
 
-## Deploy your own
+- Desenvolva este Layout: [https://xd.adobe.com/spec/9c4a9206-ac61-4050-796d-89c00fb79e91-ea7b](https://xd.adobe.com/spec/9c4a9206-ac61-4050-796d-89c00fb79e91-ea7b)
+- Utilize a tecnologia de sua preferencia (ReactJs, Angular,
+  Angularjs, Vue.js, Jquery, Bootstrap, Material, Nodejs, Java, C#, PHP,
+  etc).
 
-Deploy the example using [Vercel](https://vercel.com?utm_source=github&utm_medium=readme&utm_campaign=next-example):
+# Roadmap
 
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/git/external?repository-url=https://github.com/vercel/next.js/tree/canary/examples/with-typescript-eslint-jest&project-name=with-typescript-eslint-jest&repository-name=with-typescript-eslint-jest)
+  ## Requisitos
 
-## How to use
+  - Faça códigos legiveis e utilize uma arquitetura de fácil entendimento.
+  - Edite este Readme ou crie um novo Markdown explicando como um DEV deveria utilizar o projeto
 
-Execute [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app) with [npm](https://docs.npmjs.com/cli/init) or [Yarn](https://yarnpkg.com/lang/en/docs/cli/create/) to bootstrap the example:
+  ## Bonus
 
-```bash
-npx create-next-app --example with-typescript-eslint-jest with-typescript-eslint-jest-app
-# or
-yarn create next-app --example with-typescript-eslint-jest with-typescript-eslint-jest-app
-```
+  - Testes automatizados.
+  - Crie uma camada que efetue uma chamada REST para um endpoint fictício "/pagar" - iremos analisar apenas a estrutura
 
-Deploy it to the cloud with [Vercel](https://vercel.com/new?utm_source=github&utm_medium=readme&utm_campaign=next-example) ([Documentation](https://nextjs.org/docs/deployment)).
+## QA Plan
+
+- Automated tests with selenium
+- Metrics
+  - Acessibility
+  - Portability
+  - Performance
+  - Security
+  - Code smell
+  - Uptime security
+  -
+
+## Arquitetura
+
+- Feito com express devido a vantagem sobre create-react-app
+  → [Next.js vs CRA][https://blog.logrocket.com/next-js-vs-create-react-app/]
+
+- Tecnologias: Next.js + React + Typescript + Sass + Jest + Eslint + Husky + Github Actions + Vercel
+
+## CI + CD
+
+- Express + Vecel combo
+- (Github actions continuous integration pipeline)[https://github.com/fernand0aguilar/demoshop-creditcard-checkout/actions/workflows/continuous-integration.yml]
