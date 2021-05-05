@@ -1,41 +1,17 @@
-import Head from 'next/head'
-// import useSwr from 'swr'
-import { Theme, GlobalTheme } from './style'
-import axios from 'axios'
+import React from 'react'
 
-export const Index = (): JSX.Element => {
-  const fetcher = (url: string) => axios.get(url).then((res) => res.data)
+import HelloWorld from '../src/components/hello-world'
+import Header from '../src/components/Header'
+import Footer from '../src/components/Footer'
 
+import styles from '../src/assets/hello-world.module.scss'
+
+export default function Index(): JSX.Element {
   return (
-    <div className="container">
-      <Head>
-        <title>Benx test</title>
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
-      <GlobalTheme />
-      <Theme />
-
-      <header>
-        <h2>Header 🤖</h2>
-      </header>
-
-      <main>
-        <h1>hello world 🌍</h1>
-        <button
-          onClick={async () => {
-            const data = await fetcher('/api/pagar')
-            alert(`data: ${data.message}`)
-          }}
-        >
-          Test Button
-        </button>
-      </main>
-
-      <footer>
-        <h2>FooOooter 👣</h2>
-      </footer>
+    <div className={styles.container}>
+      <Header />
+      <HelloWorld />
+      <Footer />
     </div>
   )
 }
-
-export default Index
