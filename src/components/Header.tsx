@@ -10,7 +10,7 @@ const Logo = require('../assets/logo-demoshop.svg') as string
 
 export default function Header(): JSX.Element {
   return (
-    <AppBar position="absolute" color="default" className={styles.appBar}>
+    <AppBar position="relative" color="default" className={styles.appBar}>
       <Toolbar className={styles.toolbar}>
         <figure>
           <Logo />
@@ -46,7 +46,7 @@ export default function Header(): JSX.Element {
             href="#"
             className={styles.link}
           >
-            Support
+            Carreer
           </Link>
           <Link
             variant="button"
@@ -54,19 +54,10 @@ export default function Header(): JSX.Element {
             href="#"
             className={styles.link}
           >
-            Support
+            Login
           </Link>
         </nav>
       </Toolbar>
     </AppBar>
-    // <div className={styles.headerComponent}>
-    //   <div className={styles.container}>
-    //       <header>
-    //           <figure>
-    //             <Logo />
-    //           </figure>
-    //       </header>
-    //     </div>
-    //   </div>
   )
 }

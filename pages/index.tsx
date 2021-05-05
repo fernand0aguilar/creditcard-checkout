@@ -1,17 +1,30 @@
 import React from 'react'
 
-import PaymentForm from '../src/components/PaymentForm'
 import Header from '../src/components/Header'
 import Footer from '../src/components/Footer'
 // import SidebarComponent from '../src/components/sidebarComponent'
-import styles from '../src/assets/hello-world.module.scss'
+import Dashboard from '../src/components/Dashboard'
+import Box from '@material-ui/core/Box'
 
 export default function Index(): JSX.Element {
   return (
-    <div className={styles.container}>
+    <div>
       <Header />
-      <PaymentForm />
-      {/* <SidebarComponent/> */}
+      <Box sx={{ display: 'flex' }}>
+        <Box
+          component="main"
+          sx={{
+            backgroundColor: (theme) =>
+              theme.palette.mode === 'light'
+                ? theme.palette.grey[100]
+                : theme.palette.grey[900],
+            flexGrow: 1,
+            overflow: 'auto',
+          }}
+        >
+          <Dashboard />
+        </Box>
+      </Box>
       <Footer />
     </div>
   )

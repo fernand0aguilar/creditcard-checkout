@@ -1,22 +1,21 @@
 .appBar {
-    figure {
-     float: left;
-     align-self: flex-start;
-     flex-grow: 1,
-    }
+  figure {
+    float: left;
+    align-self: flex-start;
+    flex-grow: 1;
+  }
 
-    .toolbar {
-      width: 100%;
-      flex-wrap: 'wrap';
-    }
+  .toolbar {
+    width: 100%;
+    flex-wrap: 'wrap';
+  }
 
-    .link {
-      margin: 10px;
-      background-color: #3C3C3C;
-      border-radius: 5px;
-      opacity: 1;
-    }
-
+  .link {
+    margin: 10px;
+    background-color: #3c3c3c;
+    border-radius: 5px;
+    opacity: 1;
+  }
 
   @media (min-width: 992px) {
     header {
