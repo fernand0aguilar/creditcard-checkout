@@ -3,7 +3,7 @@ import React from 'react'
 import Header from '../src/components/Header'
 import Footer from '../src/components/Footer'
 // import SidebarComponent from '../src/components/sidebarComponent'
-import Dashboard from '../src/components/Dashboard'
+import Dashboard from '../src/containers/Dashboard'
 import Box from '@material-ui/core/Box'
 
 export default function Index(): JSX.Element {

@@ -3,8 +3,8 @@ import * as React from 'react'
 import Container from '@material-ui/core/Container'
 import Grid from '@material-ui/core/Grid'
 import Paper from '@material-ui/core/Paper'
-import PaymentForm from './PaymentForm'
-import Sidebar from './Sidebar'
+import PaymentForm from '../components/PaymentForm'
+import Sidebar from '../components/Sidebar'
 
 export default function Dashboard(): JSX.Element {
   return (

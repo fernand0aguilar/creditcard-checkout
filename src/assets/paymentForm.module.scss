@@ -1,0 +1,40 @@
+@font-face {
+  font-family: 'SfProText';
+  src: url('../../public/SFProText.ttf') format('truetype');
+}
+
+$font-main: 'SfProText';
+
+.customFont {
+  font-family: $font-main;
+}
+
+.appBar {
+  position: 'relative';
+}
+
+.layout {
+  width: auto;
+  margin-left: 16px;
+  margin-right: 16px;
+}
+
+.paper {
+  margin-top: 24px;
+  margin-bottom: 24px;
+  padding: 16px;
+}
+
+.stepper {
+  padding: 24px, 0, 40px;
+}
+
+.buttons {
+  display: flex;
+  flex-direction: row-reverse;
+}
+
+.button {
+  margin-top: 24px;
+  margin-left: 8px;
+}

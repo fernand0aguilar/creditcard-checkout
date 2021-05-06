@@ -1,10 +1,11 @@
 .appBar {
+  background-color: #ffffff;
+
   figure {
     float: left;
     align-self: flex-start;
     flex-grow: 1;
   }
-
   .toolbar {
     width: 100%;
     flex-wrap: 'wrap';
