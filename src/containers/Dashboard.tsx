@@ -8,6 +8,7 @@ import Sidebar from '../components/Sidebar'
 import CreditCard from '../components/creditCard'
 
 import styles from '../assets/dashboard.module.scss'
+import Button from '@material-ui/core/Button'
 
 export default function Dashboard(): JSX.Element {
   return (
@@ -17,13 +18,35 @@ export default function Dashboard(): JSX.Element {
         <Grid item xs={12} md={8} lg={9}>
           <Paper sx={{ p: 0, display: 'flex', flexDirection: 'column' }}>
             <Grid container spacing={1}>
-              <Grid item xs={4} md={3} lg={7} style={{}}>
+              <Grid item xs={4} md={3} lg={7}>
                 <div className={styles.leftMenu}>
-                  <button>alterar forma de pagamento</button>
-                  <h1>Adicione um novo cartão de crédito</h1>
-                  <div style={{ position: 'relative', left: '33%' }}>
-                    <CreditCard></CreditCard>
-                  </div>
+                  <Grid
+                    container
+                    direction="column"
+                    justifyContent="center"
+                    alignItems="center"
+                    spacing={3}
+                  >
+                    <Grid item style={{ padding: '0px' }}>
+                      <Button className={styles.buttonChangePayment}>
+                        <b>&#60;</b>{' '}
+                        <span style={{ paddingLeft: '10px' }}>
+                          Alterar forma de pagamento
+                        </span>
+                      </Button>
+                    </Grid>
+                    <Grid item>
+                      <Button className={styles.buttonAddNewCard}>
+                        <i className={styles.iconAddCard}></i>
+                        <span>Adicione um novo cartão de crédito</span>
+                      </Button>
+                    </Grid>
+                    <Grid item>
+                      <div className={styles.cardContainer}>
+                        <CreditCard></CreditCard>
+                      </div>
+                    </Grid>
+                  </Grid>
                 </div>
               </Grid>
               <Grid

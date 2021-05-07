@@ -1,7 +1,57 @@
 @import './styles.scss';
 
+.cardContainer {
+  position: relative;
+  left: 33%;
+}
+
 .leftMenu {
-    width: 352px;
-    height: 100%;
     background-color: $theme-color;
+    display: flex;
+    @media (max-width: 900px) {
+        width: 100vw;
+        height: 100%;
+    }
+    @media (min-width: 1200px) {    
+            width: 352px;
+            height: 100%;
+      
+    }
+    }
+.buttonChangePayment {
+  text-transform: initial;
+  background-color: $theme-color;
+  color: white;
+}
+.iconAddCard {
+  width: 50px !important;
+  height: 50px;
+  background-image: url('../../public/card-icon.svg');
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.buttonAddNewCard {
+  display: flex;
+  align-items: center;
+  align-self: end;
+  justify-self: center;
+  text-transform: initial;
+
+  text-align: left;
+  i {
+    margin-right: 15px;
+  }
+
+  span {
+    display: flex;
+    width: calc(100% - 65px);
+
+    font-size: 20px;
+    line-height: 24px;
+
+    color: white;
+    font-weight: bold;
+    letter-spacing: -0.01px;
+  }
 }
