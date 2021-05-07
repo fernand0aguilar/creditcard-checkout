@@ -4,11 +4,8 @@ import React from 'react'
 import styles from '../assets/creditCard.module.scss'
 import Grid from '@material-ui/core/Grid'
 
-export default function CreditCard(): JSX.Element {
-  const [cardName] = React.useState('NOME DO TITULAR')
-  const [cardNumber] = React.useState('**** **** **** ****')
-  // const [cardCvv] = React.useState('322')
-  const [cardExpirationDate] = React.useState('00/00')
+export default function CreditCard(props): JSX.Element {
+  const { cardNumber, cardName, cardExpirationDate, cardCvv } = props.cardInfo
 
   return (
     <div>
@@ -27,10 +24,10 @@ export default function CreditCard(): JSX.Element {
               </Grid>
             </Grid>
           </div>
+          <div className={styles.card__cvv}>{cardCvv}</div>
 
           {/* <div className={styles.card__back}>
             <div className={styles.card__cvv}>
-              <div className={styles.card__cvv}>{cardCvv}</div>
             </div>
           </div> */}
         </Grid>

@@ -13,12 +13,14 @@ import FormControl from '@material-ui/core/FormControl'
 
 import styles from '../assets/paymentForm.module.scss'
 
-export const PaymentForm = (): JSX.Element => {
+export const PaymentForm = (props): JSX.Element => {
   const fetcher = (url: string) => axios.get(url).then((res) => res.data)
 
   const steps = ['Carrinho', 'Pagamento', 'Confirmação']
 
   const [activeStep] = React.useState(1)
+
+  const { cardInfoSetters } = props
 
   return (
     <main className={styles.layout}>
@@ -43,6 +45,9 @@ export const PaymentForm = (): JSX.Element => {
                   fullWidth
                   autoComplete="cc-number"
                   variant="standard"
+                  onChange={(e) =>
+                    cardInfoSetters.setCardNumber(e.target.value)
+                  }
                 />
               </Grid>
               <Grid item xs={12} md={12}>
@@ -53,6 +58,7 @@ export const PaymentForm = (): JSX.Element => {
                   fullWidth
                   autoComplete="cc-name"
                   variant="standard"
+                  onChange={(e) => cardInfoSetters.setCardName(e.target.value)}
                 />
               </Grid>
               <Grid item xs={12} md={6}>
@@ -63,6 +69,9 @@ export const PaymentForm = (): JSX.Element => {
                   fullWidth
                   autoComplete="cc-exp"
                   variant="standard"
+                  onChange={(e) =>
+                    cardInfoSetters.setCardExpirationDate(e.target.value)
+                  }
                 />
               </Grid>
               <Grid item xs={12} md={6}>
@@ -74,6 +83,7 @@ export const PaymentForm = (): JSX.Element => {
                   fullWidth
                   autoComplete="cc-csc"
                   variant="standard"
+                  onChange={(e) => cardInfoSetters.setCardCvv(e.target.value)}
                 />
               </Grid>
               <Grid item xs={12}>

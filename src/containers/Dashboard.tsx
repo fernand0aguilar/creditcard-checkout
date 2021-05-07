@@ -11,6 +11,24 @@ import styles from '../assets/dashboard.module.scss'
 import Button from '@material-ui/core/Button'
 
 export default function Dashboard(): JSX.Element {
+  const [cardName, setCardName] = React.useState('NOME DO TITULAR')
+  const [cardNumber, setCardNumber] = React.useState('**** **** **** ****')
+  const [cardCvv, setCardCvv] = React.useState('322')
+  const [cardExpirationDate, setCardExpirationDate] = React.useState('00/00')
+
+  const cardInfo = {
+    cardName,
+    cardNumber,
+    cardExpirationDate,
+    cardCvv,
+  }
+  const cardInfoSetters = {
+    setCardName,
+    setCardNumber,
+    setCardCvv,
+    setCardExpirationDate,
+  }
+
   return (
     <Container maxWidth="lg" sx={{ mt: 4, mb: 4 }}>
       {/* PAYMENT FORM */}
@@ -43,7 +61,7 @@ export default function Dashboard(): JSX.Element {
                     </Grid>
                     <Grid item>
                       <div className={styles.cardContainer}>
-                        <CreditCard></CreditCard>
+                        <CreditCard cardInfo={cardInfo}></CreditCard>
                       </div>
                     </Grid>
                   </Grid>
@@ -56,7 +74,10 @@ export default function Dashboard(): JSX.Element {
                 lg={5}
                 style={{ padding: '50px 0 60px 0' }}
               >
-                <PaymentForm />
+                <PaymentForm
+                  cardInfo={cardInfo}
+                  cardInfoSetters={cardInfoSetters}
+                />
               </Grid>
             </Grid>
           </Paper>
