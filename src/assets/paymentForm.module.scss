@@ -1,3 +1,5 @@
+@import './styles.scss';
+
 @font-face {
   font-family: 'SfProText';
   src: url('../../public/SFProText.ttf') format('truetype');
@@ -26,7 +28,8 @@ $font-main: 'SfProText';
 }
 
 .stepper {
-  padding: 24px, 0, 40px;
+  font-size: 10px;
+  color: $theme-color;
 }
 
 .buttons {
@@ -37,4 +40,6 @@ $font-main: 'SfProText';
 .button {
   margin-top: 24px;
   margin-left: 8px;
+  border-radius: 9px;
+  background-color: $text-color-featured;
 }

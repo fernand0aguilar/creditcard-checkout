@@ -26,6 +26,7 @@ export default function Deposits(): JSX.Element {
         on 15 March, 2019
       </Typography>
       <div>
+        <hr />
         <Link color="primari.main" href="#" onClick={preventDefault}>
           View balance
         </Link>

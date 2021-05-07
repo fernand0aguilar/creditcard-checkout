@@ -1,17 +1,11 @@
-$backgroundColor: #2ecc71;
+$text-color: #3c3c3c;
+$text-color-invert: #fff;
+$text-color-secondary: #c9c9c9;
+$text-color-featured: #de4b4b;
+$theme-color: #de4b4b;
+$background: #fff;
+$page-background: #f7f7f7;
 
 .app {
-  background-color: $backgroundColor;
-}
-
-html,
-body {
-  padding: 0;
-  margin: 0;
-  font-family: verdana, -apple-system, SanFranciscoPro, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
-}
-
-* {
-  box-sizing: border-box;
+  background-color: $background;
 }
