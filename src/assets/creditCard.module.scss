@@ -1,4 +1,3 @@
-
 .card {
   width: 365px;
   height: 224px;
@@ -19,12 +18,12 @@
   &__front {
     display: grid;
     background-image: url('../../public/clean-card.svg');
-
-    &.fullfilled {
-      background-image: url('../../public/blue-card.svg');
-    }
   }
-  
+
+  &__back {
+    background-image: url('../../public/blue-card.svg');
+  }
+
   &__number {
     display: block;
     align-self: end;
@@ -44,7 +43,7 @@
     display: flex;
     flex-direction: column-reverse;
     margin-bottom: 20px;
-    color: white
+    color: white;
   }
 
   &__expirationDate {
@@ -53,5 +52,4 @@
     flex-direction: column-reverse;
     margin-bottom: 20px;
   }
-
 }

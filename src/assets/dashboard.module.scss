@@ -6,18 +6,17 @@
 }
 
 .leftMenu {
-    background-color: $theme-color;
-    display: flex;
-    @media (max-width: 900px) {
-        width: 100vw;
-        height: 100%;
-    }
-    @media (min-width: 1200px) {    
-            width: 352px;
-            height: 100%;
-      
-    }
-    }
+  background-color: $theme-color;
+  display: flex;
+  @media (max-width: 900px) {
+    width: 100vw;
+    height: 100%;
+  }
+  @media (min-width: 1200px) {
+    width: 352px;
+    height: 100%;
+  }
+}
 .buttonChangePayment {
   text-transform: initial;
   background-color: $theme-color;

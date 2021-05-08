@@ -43,3 +43,10 @@ $font-main: 'SfProText';
   border-radius: 9px;
   background-color: $text-color-featured;
 }
+
+
+.cvv-input {
+  :focus {
+    background-color: red;
+  }
+}

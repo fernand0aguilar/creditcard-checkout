@@ -1,6 +1,5 @@
-import axios from 'axios'
-
 import React from 'react'
+import axios from 'axios'
 
 import Grid from '@material-ui/core/Grid'
 import TextField from '@material-ui/core/TextField'
@@ -13,14 +12,22 @@ import FormControl from '@material-ui/core/FormControl'
 
 import styles from '../assets/paymentForm.module.scss'
 
-export const PaymentForm = (props): JSX.Element => {
+export const PaymentForm = (props: {
+  cardInfoSetters: {
+    setCardNumber: React.Dispatch<React.SetStateAction<string>>
+    setCardName: React.Dispatch<React.SetStateAction<string>>
+    setCardExpirationDate: React.Dispatch<React.SetStateAction<string>>
+    setCardCvv: React.Dispatch<React.SetStateAction<string>>
+  }
+  isCVV: [boolean, React.Dispatch<React.SetStateAction<boolean>>]
+}): JSX.Element => {
   const fetcher = (url: string) => axios.get(url).then((res) => res.data)
 
   const steps = ['Carrinho', 'Pagamento', 'Confirmação']
 
   const [activeStep] = React.useState(1)
 
-  const { cardInfoSetters } = props
+  const { cardInfoSetters, isCVV } = props
 
   return (
     <main className={styles.layout}>
@@ -84,6 +91,8 @@ export const PaymentForm = (props): JSX.Element => {
                   autoComplete="cc-csc"
                   variant="standard"
                   onChange={(e) => cardInfoSetters.setCardCvv(e.target.value)}
+                  onFocus={() => isCVV[1](true)}
+                  onBlur={() => isCVV[1](false)}
                 />
               </Grid>
               <Grid item xs={12}>

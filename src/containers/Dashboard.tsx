@@ -15,6 +15,7 @@ export default function Dashboard(): JSX.Element {
   const [cardNumber, setCardNumber] = React.useState('**** **** **** ****')
   const [cardCvv, setCardCvv] = React.useState('322')
   const [cardExpirationDate, setCardExpirationDate] = React.useState('00/00')
+  const [isCVVSelected, setIsCVVSelected] = React.useState(false)
 
   const cardInfo = {
     cardName,
@@ -22,6 +23,7 @@ export default function Dashboard(): JSX.Element {
     cardExpirationDate,
     cardCvv,
   }
+
   const cardInfoSetters = {
     setCardName,
     setCardNumber,
@@ -61,7 +63,7 @@ export default function Dashboard(): JSX.Element {
                     </Grid>
                     <Grid item>
                       <div className={styles.cardContainer}>
-                        <CreditCard cardInfo={cardInfo}></CreditCard>
+                        <CreditCard cardInfo={cardInfo} cvv={isCVVSelected} />
                       </div>
                     </Grid>
                   </Grid>
@@ -75,8 +77,8 @@ export default function Dashboard(): JSX.Element {
                 style={{ padding: '50px 0 60px 0' }}
               >
                 <PaymentForm
-                  cardInfo={cardInfo}
                   cardInfoSetters={cardInfoSetters}
+                  isCVV={[isCVVSelected, setIsCVVSelected]}
                 />
               </Grid>
             </Grid>
