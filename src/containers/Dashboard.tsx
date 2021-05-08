@@ -13,7 +13,7 @@ import Button from '@material-ui/core/Button'
 export default function Dashboard(): JSX.Element {
   const [cardName, setCardName] = React.useState('NOME DO TITULAR')
   const [cardNumber, setCardNumber] = React.useState('**** **** **** ****')
-  const [cardCvv, setCardCvv] = React.useState('322')
+  const [cardCvv, setCardCvv] = React.useState('')
   const [cardExpirationDate, setCardExpirationDate] = React.useState('00/00')
   const [isCVVSelected, setIsCVVSelected] = React.useState(false)
 
@@ -35,10 +35,10 @@ export default function Dashboard(): JSX.Element {
     <Container maxWidth="lg" sx={{ mt: 4, mb: 4 }}>
       {/* PAYMENT FORM */}
       <Grid container spacing={3}>
-        <Grid item xs={12} md={8} lg={9}>
+        <Grid item xs={12} lg={9}>
           <Paper sx={{ p: 0, display: 'flex', flexDirection: 'column' }}>
             <Grid container spacing={1}>
-              <Grid item xs={4} md={3} lg={7}>
+              <Grid item xs={4} lg={7}>
                 <div className={styles.leftMenu}>
                   <Grid
                     container
@@ -69,13 +69,7 @@ export default function Dashboard(): JSX.Element {
                   </Grid>
                 </div>
               </Grid>
-              <Grid
-                item
-                xs={12}
-                md={4}
-                lg={5}
-                style={{ padding: '50px 0 60px 0' }}
-              >
+              <Grid item xs={12} lg={5} sx={{ p: 8 }}>
                 <PaymentForm
                   cardInfoSetters={cardInfoSetters}
                   isCVV={[isCVVSelected, setIsCVVSelected]}
@@ -85,7 +79,7 @@ export default function Dashboard(): JSX.Element {
           </Paper>
         </Grid>
         {/* Sidebar */}
-        <Grid item xs={12} md={4} lg={3}>
+        <Grid item xs={12} lg={3}>
           <Paper sx={{ p: 2, display: 'flex', flexDirection: 'column' }}>
             <Sidebar />
           </Paper>

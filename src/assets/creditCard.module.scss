@@ -5,6 +5,7 @@
 
   &__front,
   &__back {
+    display: grid;
     box-sizing: border-box;
     position: absolute;
     width: 100%;
@@ -15,12 +16,11 @@
     border-radius: 10px;
   }
 
-  &__front {
-    display: grid;
+  &__cleanBg {
     background-image: url('../../public/clean-card.svg');
   }
 
-  &__back {
+  &__blueBg {
     background-image: url('../../public/blue-card.svg');
   }
 

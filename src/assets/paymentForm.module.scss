@@ -28,8 +28,15 @@ $font-main: 'SfProText';
 }
 
 .stepper {
+  margin-top: 20px;
   font-size: 10px;
-  color: $theme-color;
+  border-color: $theme-color;
+  background-color: none;
+  &active {
+    &line {
+      border-color: #784af4,
+    };
+  };
 }
 
 .buttons {
@@ -42,8 +49,8 @@ $font-main: 'SfProText';
   margin-left: 8px;
   border-radius: 9px;
   background-color: $text-color-featured;
+  color: white;
 }
-
 
 .cvv-input {
   :focus {

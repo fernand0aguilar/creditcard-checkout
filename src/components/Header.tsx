@@ -6,7 +6,7 @@ import Link from '@material-ui/core/Link'
 
 import styles from '../assets/header.module.scss'
 
-const Logo = require('../assets/logo-demoshop.svg') as string
+const Logo = require('../../public/logo-demoshop.svg') as string
 
 export default function Header(): JSX.Element {
   return (

@@ -98,12 +98,13 @@ export const PaymentForm = (props: {
               <Grid item xs={12}>
                 <FormControl fullWidth>
                   <NativeSelect
-                    defaultValue={12}
+                    defaultValue={''}
                     inputProps={{
                       name: 'parcelas',
                       id: 'uncontrolled-native',
                     }}
                   >
+                    <option value=""></option>
                     <option value={12}>12 x R$1.000,00 sem juros</option>
                     <option value={6}>6 x R$2.000,00 sem juros</option>
                     <option value={3}>3 x R$4.000,00 sem juros</option>
