@@ -5,6 +5,10 @@
     float: left;
     align-self: flex-start;
     flex-grow: 1;
+    @media (max-width: 900px) {
+      display: flex;
+      justify-content: center;
+    }
   }
   .toolbar {
     width: 100%;
@@ -17,21 +21,9 @@
     border-radius: 5px;
     opacity: 1;
   }
-
-  @media (min-width: 992px) {
-    header {
-      figure {
-        margin: 20px 0;
-      }
-    }
-    .container {
-      width: 992px;
-    }
-  }
-
-  @media (min-width: 1366px) {
-    .container {
-      width: 1366px;
+  .menu {
+    @media (max-width: 900px) {
+      display: none;
     }
   }
 }

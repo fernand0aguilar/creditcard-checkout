@@ -31,7 +31,6 @@ export const PaymentForm = (props: {
 
   return (
     <main className={styles.layout}>
-      {/* <Paper className={styles.paper}> */}
       <Stepper activeStep={activeStep} className={styles.stepper}>
         {steps.map((label) => (
           <Step key={label}>

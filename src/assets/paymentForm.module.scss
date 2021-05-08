@@ -17,8 +17,10 @@ $font-main: 'SfProText';
 
 .layout {
   width: auto;
-  margin-left: 16px;
-  margin-right: 16px;
+  @media (max-width: 1280px) {
+    margin-left: 16px;
+    margin-right: 16px;
+  }
 }
 
 .paper {
@@ -32,11 +34,9 @@ $font-main: 'SfProText';
   font-size: 10px;
   border-color: $theme-color;
   background-color: none;
-  &active {
-    &line {
-      border-color: #784af4,
-    };
-  };
+  @media (max-width: 1280px) {
+    display: none;
+  }
 }
 
 .buttons {
@@ -50,10 +50,4 @@ $font-main: 'SfProText';
   border-radius: 9px;
   background-color: $text-color-featured;
   color: white;
-}
-
-.cvv-input {
-  :focus {
-    background-color: red;
-  }
 }

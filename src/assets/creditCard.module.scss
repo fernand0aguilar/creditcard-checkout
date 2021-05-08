@@ -3,6 +3,11 @@
   height: 224px;
   margin-top: 20px;
 
+  @media (max-width: 720px) {
+    width: 280px;
+    height: 180px;
+  }
+
   &__front,
   &__back {
     display: grid;

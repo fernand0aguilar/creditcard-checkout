@@ -15,7 +15,7 @@ export default function Header(): JSX.Element {
         <figure>
           <Logo />
         </figure>
-        <nav>
+        <nav className={styles.menu}>
           <Link
             variant="button"
             color="text.primary"

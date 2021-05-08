@@ -37,8 +37,8 @@ export default function Dashboard(): JSX.Element {
       <Grid container spacing={3}>
         <Grid item xs={12} lg={9}>
           <Paper sx={{ p: 0, display: 'flex', flexDirection: 'column' }}>
-            <Grid container spacing={1}>
-              <Grid item xs={4} lg={7}>
+            <Grid container>
+              <Grid item xs={12} lg={7}>
                 <div className={styles.leftMenu}>
                   <Grid
                     container
@@ -50,12 +50,17 @@ export default function Dashboard(): JSX.Element {
                     <Grid item style={{ padding: '0px' }}>
                       <Button className={styles.buttonChangePayment}>
                         <b>&#60;</b>{' '}
-                        <span style={{ paddingLeft: '10px' }}>
+                        <span className={styles.buttonChangePayment__label}>
                           Alterar forma de pagamento
                         </span>
                       </Button>
                     </Grid>
                     <Grid item>
+                      <div className={styles.headerMobile}>
+                        <p>
+                          <strong>Etapa 2</strong> de 3
+                        </p>
+                      </div>
                       <Button className={styles.buttonAddNewCard}>
                         <i className={styles.iconAddCard}></i>
                         <span>Adicione um novo cartão de crédito</span>
@@ -69,7 +74,7 @@ export default function Dashboard(): JSX.Element {
                   </Grid>
                 </div>
               </Grid>
-              <Grid item xs={12} lg={5} sx={{ p: 8 }}>
+              <Grid item xs={12} lg={5} className={styles.paymentContainer}>
                 <PaymentForm
                   cardInfoSetters={cardInfoSetters}
                   isCVV={[isCVVSelected, setIsCVVSelected]}
