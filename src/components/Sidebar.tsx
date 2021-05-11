@@ -1,35 +1,85 @@
 import * as React from 'react'
-import Link from '@material-ui/core/Link'
 import Typography from '@material-ui/core/Typography'
-
-function preventDefault(event: React.MouseEvent) {
-  event.preventDefault()
-}
+import Grid from '@material-ui/core/Grid'
 
 export default function Deposits(): JSX.Element {
   return (
     <React.Fragment>
-      <h2>
-        Recent Deposits
-        <hr />
+      <h2 style={{ backgroundColor: '#F7F7F7', borderRadius: '5px' }}>
+        <br />
       </h2>
-      <Typography component="p" variant="h4">
-        $3,024.00
-      </Typography>
-      <Typography color="text.secondary" sx={{ flex: 1 }}>
-        on 15 March, 2019
-      </Typography>
-      <Typography color="text.secondary" sx={{ flex: 1 }}>
-        on 15 March, 2019
-      </Typography>
-      <Typography color="text.secondary" sx={{ flex: 1 }}>
-        on 15 March, 2019
-      </Typography>
+      <h4>
+        <hr />
+      </h4>
+      <Grid container>
+        <Grid item xs={10}>
+          <Typography
+            color="text.secondary"
+            sx={{ flex: 1, backgroundColor: '#F7F7F7', margin: '10px' }}
+          >
+            *
+          </Typography>{' '}
+        </Grid>
+        <Grid item xs={2}>
+          <Typography
+            color="text.secondary"
+            sx={{ flex: 1, backgroundColor: '#F7F7F7', margin: '10px' }}
+          >
+            *
+          </Typography>
+        </Grid>
+        <Grid item xs={10}>
+          <Typography
+            color="text.secondary"
+            sx={{ flex: 1, backgroundColor: '#F7F7F7', margin: '10px' }}
+          >
+            *
+          </Typography>
+        </Grid>
+        <Grid item xs={2}>
+          <Typography
+            color="text.secondary"
+            sx={{ flex: 1, backgroundColor: '#F7F7F7', margin: '10px' }}
+          >
+            *
+          </Typography>
+        </Grid>
+        <Grid item xs={10}>
+          <Typography
+            color="text.secondary"
+            sx={{ flex: 1, backgroundColor: '#F7F7F7', margin: '10px' }}
+          >
+            *
+          </Typography>
+        </Grid>
+        <Grid item xs={2}>
+          <Typography
+            color="text.secondary"
+            sx={{ flex: 1, backgroundColor: '#F7F7F7', margin: '10px' }}
+          >
+            *
+          </Typography>
+        </Grid>
+      </Grid>
       <div>
         <hr />
-        <Link color="primari.main" href="#" onClick={preventDefault}>
-          View balance
-        </Link>
+        <Grid container>
+          <Grid item xs={10}>
+            <Typography
+              sx={{ flex: 1, backgroundColor: '#C9C9C9', margin: '10px' }}
+            >
+              *
+            </Typography>
+          </Grid>
+          <Grid item xs={2}>
+            <Typography
+              color="text.secondary"
+              sx={{ flex: 1, backgroundColor: '#C9C9C9', margin: '10px' }}
+            >
+              *
+            </Typography>
+          </Grid>
+        </Grid>
       </div>
     </React.Fragment>
   )

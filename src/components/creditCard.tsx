@@ -20,12 +20,12 @@ export default function CreditCard(props: {
         <div
           className={`${styles.card__back}  ${
             props.cvv && cardCvv !== ''
-              ? styles.card__blueBg
-              : styles.card__cleanBg
+              ? styles.card__blueBg__back
+              : styles.card__cleanBg__back
           }`}
         >
           <div className={styles.card__cvv}>
-            <div className={styles.card__cvv}>{cardCvv}</div>
+            <div className={styles.card__cvv_digits}>{cardCvv}</div>
           </div>
         </div>
       </Grid>
@@ -42,6 +42,7 @@ export default function CreditCard(props: {
               : styles.card__cleanBg
           }`}
         >
+          <figure className={styles.visaLogo}></figure>
           <Grid item xs={12} className={styles.card__number}>
             {cardNumber}
           </Grid>

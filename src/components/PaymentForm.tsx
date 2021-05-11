@@ -10,6 +10,10 @@ import Button from '@material-ui/core/Button'
 import NativeSelect from '@material-ui/core/NativeSelect'
 import FormControl from '@material-ui/core/FormControl'
 
+import { useFormik } from 'formik'
+
+import * as Yup from 'yup'
+
 import styles from '../assets/paymentForm.module.scss'
 
 export const PaymentForm = (props: {
@@ -29,6 +33,26 @@ export const PaymentForm = (props: {
 
   const { cardInfoSetters, isCVV } = props
 
+  const validationSchema = Yup.object({
+    cardName: Yup.string().required('Insira seu nome completo'),
+    cardNumber: Yup.string().required('Número de cartão inválido'),
+    cardExpirationDate: Yup.date().min(new Date()).required('Data Inválida'),
+    cardCvv: Yup.number().required('Código Inválido'),
+  })
+
+  const formik = useFormik({
+    initialValues: {
+      cardName: '',
+      cardNumber: '',
+      cardExpirationDate: '',
+      cardCvv: '',
+    },
+    validationSchema: validationSchema,
+    onSubmit: (values) => {
+      alert(JSON.stringify(values, null, 2))
+    },
+  })
+
   return (
     <main className={styles.layout}>
       <Stepper activeStep={activeStep} className={styles.stepper}>
@@ -38,58 +62,92 @@ export const PaymentForm = (props: {
           </Step>
         ))}
       </Stepper>
-      <React.Fragment>
+      <form onSubmit={formik.handleSubmit}>
         <React.Fragment>
           <React.Fragment>
             <br />
             <Grid container spacing={3}>
               <Grid item xs={12} md={12}>
                 <TextField
-                  required
                   id="standard-required"
+                  name="cardNumber"
                   label="Número do Cartão"
                   fullWidth
                   autoComplete="cc-number"
                   variant="standard"
-                  onChange={(e) =>
-                    cardInfoSetters.setCardNumber(e.target.value)
+                  value={formik.values.cardNumber}
+                  error={
+                    formik.touched.cardNumber &&
+                    Boolean(formik.errors.cardNumber)
                   }
+                  helperText={
+                    formik.touched.cardNumber && formik.errors.cardNumber
+                  }
+                  onChange={(e) => {
+                    formik.handleChange(e)
+                    cardInfoSetters.setCardNumber(e.target.value)
+                  }}
                 />
               </Grid>
               <Grid item xs={12} md={12}>
                 <TextField
-                  required
                   id="standard-basic"
+                  name="cardName"
                   label="Nome (igual ao cartão)"
                   fullWidth
                   autoComplete="cc-name"
                   variant="standard"
-                  onChange={(e) => cardInfoSetters.setCardName(e.target.value)}
+                  value={formik.values.cardName}
+                  error={
+                    formik.touched.cardName && Boolean(formik.errors.cardName)
+                  }
+                  helperText={formik.touched.cardName && formik.errors.cardName}
+                  onChange={(e) => {
+                    formik.handleChange(e)
+                    cardInfoSetters.setCardName(e.target.value)
+                  }}
                 />
               </Grid>
               <Grid item xs={12} md={6}>
                 <TextField
-                  required
                   id="expDate"
                   label="Validade"
+                  name="cardExpirationDate"
                   fullWidth
                   autoComplete="cc-exp"
                   variant="standard"
-                  onChange={(e) =>
-                    cardInfoSetters.setCardExpirationDate(e.target.value)
+                  value={formik.values.cardExpirationDate}
+                  error={
+                    formik.touched.cardExpirationDate &&
+                    Boolean(formik.errors.cardExpirationDate)
                   }
+                  helperText={
+                    formik.touched.cardExpirationDate &&
+                    formik.errors.cardExpirationDate
+                  }
+                  onChange={(e) => {
+                    formik.handleChange(e)
+                    cardInfoSetters.setCardExpirationDate(e.target.value)
+                  }}
                 />
               </Grid>
               <Grid item xs={12} md={6}>
                 <TextField
-                  required
                   id="cvv"
                   label="CVV"
-                  helperText="Last three digits on signature strip"
+                  name="cardCvv"
                   fullWidth
                   autoComplete="cc-csc"
                   variant="standard"
-                  onChange={(e) => cardInfoSetters.setCardCvv(e.target.value)}
+                  value={formik.values.cardCvv}
+                  error={
+                    formik.touched.cardCvv && Boolean(formik.errors.cardCvv)
+                  }
+                  helperText={formik.touched.cardCvv && formik.errors.cardCvv}
+                  onChange={(e) => {
+                    formik.handleChange(e)
+                    cardInfoSetters.setCardCvv(e.target.value)
+                  }}
                   onFocus={() => isCVV[1](true)}
                   onBlur={() => isCVV[1](false)}
                 />
@@ -112,20 +170,20 @@ export const PaymentForm = (props: {
               </Grid>
             </Grid>
           </React.Fragment>
-
-          <div className={styles.buttons}>
-            <Button
-              className={styles.button}
-              onClick={async () => {
-                const data = await fetcher('/api/pagar')
-                alert(`data: ${data.message}`)
-              }}
-            >
-              Test Button
-            </Button>
-          </div>
         </React.Fragment>
-      </React.Fragment>
+        <div className={styles.buttons}>
+          <Button
+            className={styles.button}
+            type="submit"
+            onClick={async () => {
+              const data = await fetcher('/api/pagar')
+              alert(`data: ${data.message}`)
+            }}
+          >
+            Continuar
+          </Button>
+        </div>
+      </form>
       {/* </Paper> */}
     </main>
   )

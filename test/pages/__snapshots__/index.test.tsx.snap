@@ -73,10 +73,10 @@ exports[`Hello World Component matches index snapshot 1`] = `
       </div>
     </header>
     <div
-      class="css-1lomthf MuiBox-root"
+      class="MuiBox-root css-1lomthf"
     >
       <main
-        class="css-19yl9ss MuiBox-root"
+        class="MuiBox-root css-19yl9ss"
       >
         <div
           class="MuiContainer-root MuiContainer-maxWidthLg css-ah34wc-MuiContainer-root"
@@ -177,6 +177,9 @@ exports[`Hello World Component matches index snapshot 1`] = `
                                 <div
                                   class="card__front  card__cleanBg"
                                 >
+                                  <figure
+                                    class="visaLogo"
+                                  />
                                   <div
                                     class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 card__number css-6wbyuk-MuiGrid-root"
                                   >
@@ -342,225 +345,196 @@ exports[`Hello World Component matches index snapshot 1`] = `
                           </span>
                         </div>
                       </div>
-                      <br />
-                      <div
-                        class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-3 css-h51dfx-MuiGrid-root"
-                      >
+                      <form>
+                        <br />
                         <div
-                          class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-md-12 css-q3cq4-MuiGrid-root"
+                          class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-3 css-h51dfx-MuiGrid-root"
                         >
                           <div
-                            class="MuiFormControl-root MuiFormControl-fullWidth MuiTextField-root css-wb57ya-MuiFormControl-root-MuiTextField-root"
-                          >
-                            <label
-                              class="MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard MuiFormLabel-root MuiFormLabel-colorPrimary Mui-required css-hfs5yo-MuiFormLabel-root-MuiInputLabel-root"
-                              data-shrink="false"
-                              for="standard-required"
-                              id="standard-required-label"
-                            >
-                              Número do Cartão
-                              <span
-                                aria-hidden="true"
-                                class="MuiFormLabel-asterisk css-125iqkp-MuiFormLabel-asterisk"
-                              >
-                                 *
-                              </span>
-                            </label>
-                            <div
-                              class="MuiInput-root MuiInput-underline MuiInputBase-root MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl css-1b7xzdf-MuiInputBase-root-MuiInput-root"
-                            >
-                              <input
-                                aria-invalid="false"
-                                autocomplete="cc-number"
-                                class="MuiInput-input MuiInputBase-input css-1x51dt5-MuiInputBase-input-MuiInput-input"
-                                id="standard-required"
-                                required=""
-                                type="text"
-                                value=""
-                              />
-                            </div>
-                          </div>
-                        </div>
-                        <div
-                          class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-md-12 css-q3cq4-MuiGrid-root"
-                        >
-                          <div
-                            class="MuiFormControl-root MuiFormControl-fullWidth MuiTextField-root css-wb57ya-MuiFormControl-root-MuiTextField-root"
-                          >
-                            <label
-                              class="MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard MuiFormLabel-root MuiFormLabel-colorPrimary Mui-required css-hfs5yo-MuiFormLabel-root-MuiInputLabel-root"
-                              data-shrink="false"
-                              for="standard-basic"
-                              id="standard-basic-label"
-                            >
-                              Nome (igual ao cartão)
-                              <span
-                                aria-hidden="true"
-                                class="MuiFormLabel-asterisk css-125iqkp-MuiFormLabel-asterisk"
-                              >
-                                 *
-                              </span>
-                            </label>
-                            <div
-                              class="MuiInput-root MuiInput-underline MuiInputBase-root MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl css-1b7xzdf-MuiInputBase-root-MuiInput-root"
-                            >
-                              <input
-                                aria-invalid="false"
-                                autocomplete="cc-name"
-                                class="MuiInput-input MuiInputBase-input css-1x51dt5-MuiInputBase-input-MuiInput-input"
-                                id="standard-basic"
-                                required=""
-                                type="text"
-                                value=""
-                              />
-                            </div>
-                          </div>
-                        </div>
-                        <div
-                          class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-md-6 css-13liyab-MuiGrid-root"
-                        >
-                          <div
-                            class="MuiFormControl-root MuiFormControl-fullWidth MuiTextField-root css-wb57ya-MuiFormControl-root-MuiTextField-root"
-                          >
-                            <label
-                              class="MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard MuiFormLabel-root MuiFormLabel-colorPrimary Mui-required css-hfs5yo-MuiFormLabel-root-MuiInputLabel-root"
-                              data-shrink="false"
-                              for="expDate"
-                              id="expDate-label"
-                            >
-                              Validade
-                              <span
-                                aria-hidden="true"
-                                class="MuiFormLabel-asterisk css-125iqkp-MuiFormLabel-asterisk"
-                              >
-                                 *
-                              </span>
-                            </label>
-                            <div
-                              class="MuiInput-root MuiInput-underline MuiInputBase-root MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl css-1b7xzdf-MuiInputBase-root-MuiInput-root"
-                            >
-                              <input
-                                aria-invalid="false"
-                                autocomplete="cc-exp"
-                                class="MuiInput-input MuiInputBase-input css-1x51dt5-MuiInputBase-input-MuiInput-input"
-                                id="expDate"
-                                required=""
-                                type="text"
-                                value=""
-                              />
-                            </div>
-                          </div>
-                        </div>
-                        <div
-                          class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-md-6 css-13liyab-MuiGrid-root"
-                        >
-                          <div
-                            class="MuiFormControl-root MuiFormControl-fullWidth MuiTextField-root css-wb57ya-MuiFormControl-root-MuiTextField-root"
-                          >
-                            <label
-                              class="MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard MuiFormLabel-root MuiFormLabel-colorPrimary Mui-required css-hfs5yo-MuiFormLabel-root-MuiInputLabel-root"
-                              data-shrink="false"
-                              for="cvv"
-                              id="cvv-label"
-                            >
-                              CVV
-                              <span
-                                aria-hidden="true"
-                                class="MuiFormLabel-asterisk css-125iqkp-MuiFormLabel-asterisk"
-                              >
-                                 *
-                              </span>
-                            </label>
-                            <div
-                              class="MuiInput-root MuiInput-underline MuiInputBase-root MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl css-1b7xzdf-MuiInputBase-root-MuiInput-root"
-                            >
-                              <input
-                                aria-describedby="cvv-helper-text"
-                                aria-invalid="false"
-                                autocomplete="cc-csc"
-                                class="MuiInput-input MuiInputBase-input css-1x51dt5-MuiInputBase-input-MuiInput-input"
-                                id="cvv"
-                                required=""
-                                type="text"
-                                value=""
-                              />
-                            </div>
-                            <p
-                              class="MuiFormHelperText-root MuiFormHelperText-sizeMedium Mui-required css-1m3tgtj-MuiFormHelperText-root"
-                              id="cvv-helper-text"
-                            >
-                              Last three digits on signature strip
-                            </p>
-                          </div>
-                        </div>
-                        <div
-                          class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-6wbyuk-MuiGrid-root"
-                        >
-                          <div
-                            class="MuiFormControl-root MuiFormControl-fullWidth css-q8hpuo-MuiFormControl-root"
+                            class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-md-12 css-q3cq4-MuiGrid-root"
                           >
                             <div
-                              class="MuiInput-root MuiInput-underline MuiInputBase-root MuiInputBase-colorPrimary MuiInputBase-formControl css-w27m94-MuiInputBase-root-MuiInput-root"
+                              class="MuiFormControl-root MuiFormControl-fullWidth MuiTextField-root css-wb57ya-MuiFormControl-root-MuiTextField-root"
                             >
-                              <select
-                                aria-invalid="false"
-                                class="MuiNativeSelect-root MuiNativeSelect-select MuiNativeSelect-outlined MuiInput-input MuiInputBase-input css-1hor2t6-MuiNativeSelect-root-MuiInputBase-input-MuiInput-input"
-                                id="uncontrolled-native"
-                                name="parcelas"
+                              <label
+                                class="MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard MuiFormLabel-root MuiFormLabel-colorPrimary css-hfs5yo-MuiFormLabel-root-MuiInputLabel-root"
+                                data-shrink="false"
+                                for="standard-required"
+                                id="standard-required-label"
                               >
-                                <option
-                                  selected=""
+                                Número do Cartão
+                              </label>
+                              <div
+                                class="MuiInput-root MuiInput-underline MuiInputBase-root MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl css-1b7xzdf-MuiInputBase-root-MuiInput-root"
+                              >
+                                <input
+                                  aria-invalid="false"
+                                  autocomplete="cc-number"
+                                  class="MuiInput-input MuiInputBase-input css-1x51dt5-MuiInputBase-input-MuiInput-input"
+                                  id="standard-required"
+                                  name="cardNumber"
+                                  type="text"
                                   value=""
                                 />
-                                <option
-                                  value="12"
-                                >
-                                  12 x R$1.000,00 sem juros
-                                </option>
-                                <option
-                                  value="6"
-                                >
-                                  6 x R$2.000,00 sem juros
-                                </option>
-                                <option
-                                  value="3"
-                                >
-                                  3 x R$4.000,00 sem juros
-                                </option>
-                              </select>
-                              <svg
-                                aria-hidden="true"
-                                class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiNativeSelect-icon MuiNativeSelect-iconOutlined css-9qlkid-MuiSvgIcon-root-MuiNativeSelect-icon"
-                                data-testid="ArrowDropDownIcon"
-                                focusable="false"
-                                viewBox="0 0 24 24"
+                              </div>
+                            </div>
+                          </div>
+                          <div
+                            class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-md-12 css-q3cq4-MuiGrid-root"
+                          >
+                            <div
+                              class="MuiFormControl-root MuiFormControl-fullWidth MuiTextField-root css-wb57ya-MuiFormControl-root-MuiTextField-root"
+                            >
+                              <label
+                                class="MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard MuiFormLabel-root MuiFormLabel-colorPrimary css-hfs5yo-MuiFormLabel-root-MuiInputLabel-root"
+                                data-shrink="false"
+                                for="standard-basic"
+                                id="standard-basic-label"
                               >
-                                <path
-                                  d="M7 10l5 5 5-5z"
+                                Nome (igual ao cartão)
+                              </label>
+                              <div
+                                class="MuiInput-root MuiInput-underline MuiInputBase-root MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl css-1b7xzdf-MuiInputBase-root-MuiInput-root"
+                              >
+                                <input
+                                  aria-invalid="false"
+                                  autocomplete="cc-name"
+                                  class="MuiInput-input MuiInputBase-input css-1x51dt5-MuiInputBase-input-MuiInput-input"
+                                  id="standard-basic"
+                                  name="cardName"
+                                  type="text"
+                                  value=""
                                 />
-                              </svg>
+                              </div>
+                            </div>
+                          </div>
+                          <div
+                            class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-md-6 css-13liyab-MuiGrid-root"
+                          >
+                            <div
+                              class="MuiFormControl-root MuiFormControl-fullWidth MuiTextField-root css-wb57ya-MuiFormControl-root-MuiTextField-root"
+                            >
+                              <label
+                                class="MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard MuiFormLabel-root MuiFormLabel-colorPrimary css-hfs5yo-MuiFormLabel-root-MuiInputLabel-root"
+                                data-shrink="false"
+                                for="expDate"
+                                id="expDate-label"
+                              >
+                                Validade
+                              </label>
+                              <div
+                                class="MuiInput-root MuiInput-underline MuiInputBase-root MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl css-1b7xzdf-MuiInputBase-root-MuiInput-root"
+                              >
+                                <input
+                                  aria-invalid="false"
+                                  autocomplete="cc-exp"
+                                  class="MuiInput-input MuiInputBase-input css-1x51dt5-MuiInputBase-input-MuiInput-input"
+                                  id="expDate"
+                                  name="cardExpirationDate"
+                                  type="text"
+                                  value=""
+                                />
+                              </div>
+                            </div>
+                          </div>
+                          <div
+                            class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-md-6 css-13liyab-MuiGrid-root"
+                          >
+                            <div
+                              class="MuiFormControl-root MuiFormControl-fullWidth MuiTextField-root css-wb57ya-MuiFormControl-root-MuiTextField-root"
+                            >
+                              <label
+                                class="MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard MuiFormLabel-root MuiFormLabel-colorPrimary css-hfs5yo-MuiFormLabel-root-MuiInputLabel-root"
+                                data-shrink="false"
+                                for="cvv"
+                                id="cvv-label"
+                              >
+                                CVV
+                              </label>
+                              <div
+                                class="MuiInput-root MuiInput-underline MuiInputBase-root MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl css-1b7xzdf-MuiInputBase-root-MuiInput-root"
+                              >
+                                <input
+                                  aria-invalid="false"
+                                  autocomplete="cc-csc"
+                                  class="MuiInput-input MuiInputBase-input css-1x51dt5-MuiInputBase-input-MuiInput-input"
+                                  id="cvv"
+                                  name="cardCvv"
+                                  type="text"
+                                  value=""
+                                />
+                              </div>
+                            </div>
+                          </div>
+                          <div
+                            class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-6wbyuk-MuiGrid-root"
+                          >
+                            <div
+                              class="MuiFormControl-root MuiFormControl-fullWidth css-q8hpuo-MuiFormControl-root"
+                            >
+                              <div
+                                class="MuiInput-root MuiInput-underline MuiInputBase-root MuiInputBase-colorPrimary MuiInputBase-formControl css-w27m94-MuiInputBase-root-MuiInput-root"
+                              >
+                                <select
+                                  aria-invalid="false"
+                                  class="MuiNativeSelect-root MuiNativeSelect-select MuiNativeSelect-outlined MuiInput-input MuiInputBase-input css-1hor2t6-MuiNativeSelect-root-MuiInputBase-input-MuiInput-input"
+                                  id="uncontrolled-native"
+                                  name="parcelas"
+                                >
+                                  <option
+                                    selected=""
+                                    value=""
+                                  />
+                                  <option
+                                    value="12"
+                                  >
+                                    12 x R$1.000,00 sem juros
+                                  </option>
+                                  <option
+                                    value="6"
+                                  >
+                                    6 x R$2.000,00 sem juros
+                                  </option>
+                                  <option
+                                    value="3"
+                                  >
+                                    3 x R$4.000,00 sem juros
+                                  </option>
+                                </select>
+                                <svg
+                                  aria-hidden="true"
+                                  class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiNativeSelect-icon MuiNativeSelect-iconOutlined css-9qlkid-MuiSvgIcon-root-MuiNativeSelect-icon"
+                                  data-testid="ArrowDropDownIcon"
+                                  focusable="false"
+                                  viewBox="0 0 24 24"
+                                >
+                                  <path
+                                    d="M7 10l5 5 5-5z"
+                                  />
+                                </svg>
+                              </div>
                             </div>
                           </div>
                         </div>
-                      </div>
-                      <div
-                        class="buttons"
-                      >
-                        <button
-                          class="MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButtonBase-root button css-d0ukip-MuiButtonBase-root-MuiButton-root"
-                          tabindex="0"
-                          type="button"
+                        <div
+                          class="buttons"
                         >
-                          <span
-                            class="MuiButton-label css-8xplcm-MuiButton-label"
+                          <button
+                            class="MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButtonBase-root button css-d0ukip-MuiButtonBase-root-MuiButton-root"
+                            tabindex="0"
+                            type="submit"
                           >
-                            Test Button
-                          </span>
-                          <span
-                            class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-                          />
-                        </button>
-                      </div>
+                            <span
+                              class="MuiButton-label css-8xplcm-MuiButton-label"
+                            >
+                              Continuar
+                            </span>
+                            <span
+                              class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
+                            />
+                          </button>
+                        </div>
+                      </form>
                     </main>
                   </div>
                 </div>
@@ -572,38 +546,97 @@ exports[`Hello World Component matches index snapshot 1`] = `
               <div
                 class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 css-1slnj5u-MuiPaper-root"
               >
-                <h2>
-                  Recent Deposits
-                  <hr />
+                <h2
+                  style="background-color: rgb(247, 247, 247); border-radius: 5px;"
+                >
+                  <br />
                 </h2>
-                <p
-                  class="MuiTypography-root MuiTypography-h4 css-5lbw0b-MuiTypography-root"
+                <h4>
+                  <hr />
+                </h4>
+                <div
+                  class="MuiGrid-root MuiGrid-container css-15fev7r-MuiGrid-root"
                 >
-                  $3,024.00
-                </p>
-                <p
-                  class="MuiTypography-root MuiTypography-body1 css-1slv7in-MuiTypography-root"
-                >
-                  on 15 March, 2019
-                </p>
-                <p
-                  class="MuiTypography-root MuiTypography-body1 css-1slv7in-MuiTypography-root"
-                >
-                  on 15 March, 2019
-                </p>
-                <p
-                  class="MuiTypography-root MuiTypography-body1 css-1slv7in-MuiTypography-root"
-                >
-                  on 15 March, 2019
-                </p>
+                  <div
+                    class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-10 css-83t7qv-MuiGrid-root"
+                  >
+                    <p
+                      class="MuiTypography-root MuiTypography-body1 css-1mpync-MuiTypography-root"
+                    >
+                      *
+                    </p>
+                     
+                  </div>
+                  <div
+                    class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-2 css-1u0mudd-MuiGrid-root"
+                  >
+                    <p
+                      class="MuiTypography-root MuiTypography-body1 css-1mpync-MuiTypography-root"
+                    >
+                      *
+                    </p>
+                  </div>
+                  <div
+                    class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-10 css-83t7qv-MuiGrid-root"
+                  >
+                    <p
+                      class="MuiTypography-root MuiTypography-body1 css-1mpync-MuiTypography-root"
+                    >
+                      *
+                    </p>
+                  </div>
+                  <div
+                    class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-2 css-1u0mudd-MuiGrid-root"
+                  >
+                    <p
+                      class="MuiTypography-root MuiTypography-body1 css-1mpync-MuiTypography-root"
+                    >
+                      *
+                    </p>
+                  </div>
+                  <div
+                    class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-10 css-83t7qv-MuiGrid-root"
+                  >
+                    <p
+                      class="MuiTypography-root MuiTypography-body1 css-1mpync-MuiTypography-root"
+                    >
+                      *
+                    </p>
+                  </div>
+                  <div
+                    class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-2 css-1u0mudd-MuiGrid-root"
+                  >
+                    <p
+                      class="MuiTypography-root MuiTypography-body1 css-1mpync-MuiTypography-root"
+                    >
+                      *
+                    </p>
+                  </div>
+                </div>
                 <div>
                   <hr />
-                  <a
-                    class="MuiTypography-root MuiTypography-inherit MuiLink-root MuiLink-underlineHover css-1wkdfmz-MuiTypography-root-MuiLink-root"
-                    href="#"
+                  <div
+                    class="MuiGrid-root MuiGrid-container css-15fev7r-MuiGrid-root"
                   >
-                    View balance
-                  </a>
+                    <div
+                      class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-10 css-83t7qv-MuiGrid-root"
+                    >
+                      <p
+                        class="MuiTypography-root MuiTypography-body1 css-1sqrpme-MuiTypography-root"
+                      >
+                        *
+                      </p>
+                    </div>
+                    <div
+                      class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-2 css-1u0mudd-MuiGrid-root"
+                    >
+                      <p
+                        class="MuiTypography-root MuiTypography-body1 css-5xwrox-MuiTypography-root"
+                      >
+                        *
+                      </p>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>

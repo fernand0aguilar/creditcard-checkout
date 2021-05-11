@@ -23,38 +23,63 @@
 
   &__cleanBg {
     background-image: url('../../public/clean-card.svg');
+    &__back {
+      background-image: url('../../public/clean-card-back.svg');
+    }
   }
 
   &__blueBg {
     background-image: url('../../public/blue-card.svg');
+    &__back {
+      background-image: url('../../public/blue-card-back.svg');
+    }
+
+    .visaLogo {
+      background-image: url('../../public/visaLogo.png');
+      background-repeat: no-repeat;
+      margin: 42px 0 -30px;
+    }
+  }
+
+  &__number,
+  &__name,
+  &__expirationDate,
+  &__cvv {
+    font-family: SfProText;
+    color: white;
+    font-size: 12px;
   }
 
   &__number {
     display: block;
     align-self: end;
     margin-top: 30px;
-    font-family: SfProText;
-    color: white;
-    font-size: 22px;
-    line-height: 28px;
-    letter-spacing: 2.31px;
+    font-size: 19px;
+    line-height: 21px;
+    letter-spacing: 1.52px;
     text-shadow: 0px 1px 2px #000000b3;
     text-align: center;
     word-spacing: 5px;
   }
 
   &__name,
-  &__expirationDate {
+  &__expirationDate,
+  &__cvv {
     display: flex;
     flex-direction: column-reverse;
-    margin-bottom: 20px;
-    color: white;
   }
 
+  &__name,
   &__expirationDate {
-    display: flex;
-    text-align: right;
-    flex-direction: column-reverse;
-    margin-bottom: 20px;
+    margin-bottom: 40px;
+  }
+
+  &__cvv {
+    &_digits {
+      color: black;
+      position: relative;
+      bottom: 100px;
+      left: 160px;
+    }
   }
 }

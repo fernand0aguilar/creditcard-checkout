@@ -1,6 +1,7 @@
 [![Continuous Integration](https://github.com/fernand0aguilar/demoshop-creditcard-checkout/actions/workflows/continuous-integration.yml/badge.svg)](https://github.com/fernand0aguilar/demoshop-creditcard-checkout/actions/workflows/continuous-integration.yml)
 
-# 
+#
+
 ## Desafio
 
 Desenvolver uma aplicação front-end de acordo com as especificações descritas nos **requisitos** utilizando a _stack_ tecnologica de sua preferencia.
@@ -12,15 +13,15 @@ Desenvolver uma aplicação front-end de acordo com as especificações descrita
 
 # Roadmap
 
-  ## Requisitos
+## Requisitos
 
-  - Faça códigos legiveis e utilize uma arquitetura de fácil entendimento.
-  - Edite este Readme ou crie um novo Markdown explicando como um DEV deveria utilizar o projeto
+- Faça códigos legiveis e utilize uma arquitetura de fácil entendimento.
+- Edite este Readme ou crie um novo Markdown explicando como um DEV deveria utilizar o projeto
 
-  ## Bonus
+## Bonus
 
-  - Testes automatizados.
-  - Crie uma camada que efetue uma chamada REST para um endpoint fictício "/pagar" - iremos analisar apenas a estrutura
+- Testes automatizados.
+- Crie uma camada que efetue uma chamada REST para um endpoint fictício "/pagar" - iremos analisar apenas a estrutura
 
 ## QA Plan
 

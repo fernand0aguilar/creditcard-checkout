@@ -13,7 +13,7 @@ describe('Hello World Component', () => {
     const { getByText } = render(<Index />, {})
     window.alert = jest.fn()
     new Promise(() => {
-      fireEvent.click(getByText('Test Button'))
+      fireEvent.click(getByText('Continuar'))
     }).then(() => {
       expect(window.alert).toHaveBeenCalledWith('data: pagar resposta ')
     })
